@@ -10,7 +10,7 @@ funcionalidades:
 
 3. Buscar e exibir os livros de um autor a partir de determinado ano;
 
-4. Buscar um livro pelo nome e trazer todas as suas edições;
+4. Buscar um livro pelo nome e trazer todas as suas edições em diferentes idiomas;
 
 5. Exibir os livros de determinado idioma;
 
