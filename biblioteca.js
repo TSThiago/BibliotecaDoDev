@@ -1,12 +1,13 @@
 let tituloArray = ["A", "B", "C", "B", "C"]
 let autorArray = ["Luiz", "Luiz", "Anderson", "Luiz", "Anderson"]
 let anoArray = [12, 15, 2007, 15, 2007]
-let idioma = ["Latim", "Hebraico", "Português", "Latim", "JP"]
+let idiomaArray = ["Latim", "Hebraico", "Português", "Latim", "JP"]
 
 let livroAux = []
+let idiomaAux = []
 let contador = parseInt(-1)
 
-console.log(ExibirLivrosAutorAno("Anderson", 2008))
+console.log(ExibirLivrosIdioma("B"))
 
 function ExibirLivrosAutorA(autorParametro) {
     for (let index = 0; index < autorArray.length; index++) {
@@ -39,4 +40,15 @@ function ExibirLivrosAutorAno(autorParametro,anoParametro){
     }
     contador = -1
     return livroAux
+}
+
+function ExibirLivrosIdioma(livroParametro){
+    for (let index = 0; index < idiomaArray.length; index++) {
+        if (livroParametro == tituloArray[index]) {
+            contador++
+            idiomaAux[contador] = idiomaArray[index]
+        }
+    }
+    contador = -1
+    return idiomaAux 
 }
