@@ -67,15 +67,16 @@ function ExibirLivrosEmTalIdioma(idiomaParametro){
 }
 
 function OrdenarLivrosAno(){
-    for(let atual = 0; atual < anoArray.length - 1; atual++){
-        for(let seguinte = atual + 1; seguinte < anoArray.length; seguinte++){
-            if(anoArray[atual] > anoArray[seguinte]){
-                livroSup = tituloArray[atual]
-                tituloArray[atual] = tituloArray[seguinte]
-                tituloArray[seguinte] = livroSup
+    // for(let atual = 0; atual < anoArray.length - 1; atual++){
+    //     for(let seguinte = atual + 1; seguinte < anoArray.length; seguinte++){
+    //         if(anoArray[atual] > anoArray[seguinte]){
+    //             livroSup = tituloArray[atual]
+    //             tituloArray[atual] = tituloArray[seguinte]
+    //             tituloArray[seguinte] = livroSup
 
-            }
-        }
+    //         }
+    //     }
+    anoArray.sort()
     }
-    return tituloArray
-}
+//     return tituloArray
+// }
