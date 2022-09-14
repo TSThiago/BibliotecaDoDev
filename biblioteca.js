@@ -8,7 +8,7 @@ let livroAux = []
 let idiomaAux = []
 let contador = parseInt(-1)
 
-console.log(ExibirLivrosAno(2007))
+console.log(ExibirLivrosAutorAno("Luiz", 2007))
 
 function ExibirLivrosAutor(autorParametro) {
     for (let index = 0; index < autorArray.length; index++) {
@@ -22,10 +22,10 @@ function ExibirLivrosAutor(autorParametro) {
     return livroAux
 }
 
-function ExibirLivrosAno(anoParametro){
+function ExibirLivrosAno(anoParametro) {
     for (let index = 0; index < anoArray.length; index++) {
         if (anoParametro == anoArray[index]) {
-           livroAux.push(tituloArray[index])
+            livroAux.push(tituloArray[index])
             // contador++
             // livroAux[contador] = tituloArray[index]
         }
@@ -34,41 +34,47 @@ function ExibirLivrosAno(anoParametro){
     return livroAux
 }
 
-function ExibirLivrosAutorAno(autorParametro,anoParametro){
+function ExibirLivrosAutorAno(autorParametro, anoParametro) {
     for (let index = 0; index < autorArray.length; index++) {
         if (autorParametro == autorArray[index] && anoParametro <= anoArray[index]) {
             livroAux.push(tituloArray[index])
-    //         contador++
-    //         livroAux[contador] = tituloArray[index]
-    //     }
-    // }
+            //         contador++
+            //         livroAux[contador] = tituloArray[index]
+            //     }
+            // }
+            // contador = -1
+        }
+    }
+    return livroAux
+}
+
+function ExibirLivrosIdioma(livroParametro) {
+    for (let index = 0; index < idiomaArray.length; index++) {
+        if (livroParametro == tituloArray[index]) {
+            idiomaAux.push(idiomaArray[index])
+            //         contador++
+            //         idiomaAux[contador] = idiomaArray[index]
+            //     }
+            // }
+            // contador = -1
+        }
+    }
+    return idiomaAux
+}
+
+function ExibirLivrosEmTalIdioma(idiomaParametro) {
+    for (let index = 0; index < idiomaArray.length; index++) {
+        if (idiomaParametro == idiomaArray[index]) {
+            
+            // contador++
+            // livroAux[contador] = tituloArray[index]
+        }
+    }
     // contador = -1
     return livroAux
 }
 
-function ExibirLivrosIdioma(livroParametro){
-    for (let index = 0; index < idiomaArray.length; index++) {
-        if (livroParametro == tituloArray[index]) {
-            contador++
-            idiomaAux[contador] = idiomaArray[index]
-        }
-    }
-    contador = -1
-    return idiomaAux 
-}
-
-function ExibirLivrosEmTalIdioma(idiomaParametro){
-    for(let index = 0; index < idiomaArray.length; index++){
-        if(idiomaParametro == idiomaArray[index]){
-            contador++
-            livroAux[contador] = tituloArray[index]
-        }
-    }
-    contador = -1
-    return livroAux
-}
-
-function OrdenarLivrosAno(){
+function OrdenarLivrosAno() {
     // for(let atual = 0; atual < anoArray.length - 1; atual++){
     //     for(let seguinte = atual + 1; seguinte < anoArray.length; seguinte++){
     //         if(anoArray[atual] > anoArray[seguinte]){
@@ -79,6 +85,6 @@ function OrdenarLivrosAno(){
     //         }
     //     }
     anoArray.sort()
-    }
+}
 //     return tituloArray
 // }
