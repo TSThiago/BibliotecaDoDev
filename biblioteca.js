@@ -8,7 +8,7 @@ let livroAux = []
 let idiomaAux = []
 let contador = parseInt(-1)
 
-console.log(ExibirLivrosAutorAno("Luiz", 2007))
+console.log(ExibirLivrosEmTalIdioma("Latim"))
 
 function ExibirLivrosAutor(autorParametro) {
     for (let index = 0; index < autorArray.length; index++) {
@@ -65,7 +65,7 @@ function ExibirLivrosIdioma(livroParametro) {
 function ExibirLivrosEmTalIdioma(idiomaParametro) {
     for (let index = 0; index < idiomaArray.length; index++) {
         if (idiomaParametro == idiomaArray[index]) {
-            
+            livroAux.push(tituloArray[index])
             // contador++
             // livroAux[contador] = tituloArray[index]
         }
