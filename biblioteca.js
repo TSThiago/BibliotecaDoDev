@@ -30,18 +30,19 @@ function ExibirLivrosAno(anoParametro){
             // livroAux[contador] = tituloArray[index]
         }
     }
-    contador = -1
+    // contador = -1
     return livroAux
 }
 
 function ExibirLivrosAutorAno(autorParametro,anoParametro){
     for (let index = 0; index < autorArray.length; index++) {
         if (autorParametro == autorArray[index] && anoParametro <= anoArray[index]) {
-            contador++
-            livroAux[contador] = tituloArray[index]
-        }
-    }
-    contador = -1
+            livroAux.push(tituloArray[index])
+    //         contador++
+    //         livroAux[contador] = tituloArray[index]
+    //     }
+    // }
+    // contador = -1
     return livroAux
 }
 
