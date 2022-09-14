@@ -8,17 +8,17 @@ let livroAux = []
 let idiomaAux = []
 let contador = parseInt(-1)
 
-console.log(OrdenarLivrosAno()) 
-console.log(anoArray)
+console.log(ExibirLivrosAutor("Anderson"))
 
-function ExibirLivrosAutorA(autorParametro) {
+function ExibirLivrosAutor(autorParametro) {
     for (let index = 0; index < autorArray.length; index++) {
         if (autorParametro == autorArray[index]) {
-            contador++
-            livroAux[contador] = tituloArray[index]
+            livroAux.push(tituloArray[index])
+            // contador++
+            // livroAux[contador] = tituloArray[index]
         }
     }
-    contador = -1
+    // contador = -1
     return livroAux
 }
 
